@@ -1,0 +1,79 @@
+.q {
+    position: relative;
+}
+.q {
+    position: absolute;
+    display: none;
+    top: 18%;
+    right: 40%;
+    
+
+}
+.card:hover .q { /* اولا نحدد الحاوية الاب للعنصر وبعدها نحدد العنصر المطلوب*/
+    display: inline;
+}
+time {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 6%;
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.623);
+}
+.card:hover time {
+    display: inline;
+}
+.card:hover {
+    transform: translateY(-1%); /* هنا من اجل تحريك البطاقة للاعلى عند المرور فوقها*/
+}
+.card {
+    transition: transform .3s ;  /* لتحدي مدة سرعة التحريك بالميلي ثانية */
+}
+
+a {
+    text-decoration: none !important; /*الكلمة الاخيرة لجعلها تاخد الاولوية في التنفيذ */
+    color: black;
+}
+.button_bar{
+    cursor: pointer;
+}
+.sidebar{
+    background-color: white;
+    position: fixed; /*للتثبيت*/
+    z-index: 4; /*لتظهر فوق العناصر */
+    transition: all 0.5s ease-in-out;/*لتحديد سرعة الظهور والاخفاء*/
+    height: 100%;/* لنعطيها كامل طول الصفحة */
+    padding-bottom: 60px;
+    right: -17rem;/*الحالة الافتراضية اخفاء القائمة*/
+}
+.sidebar .list-group-item:hover{
+    background-color: blueviolet;/*لون الخلفية*/
+    color: aliceblue;/*لون النص*/
+}
+#wrap.toggled .sidebar{
+    right:-17rem;/*لسحب القائمة لليمين واخفائها*/
+    
+}
+.sidebar .list-group-item{
+    width:15rem;/*تحديد عرض القائمة*/
+}
+.sidebar:hover{
+    overflow-y: scroll ;/*اظهار للتمرير*/
+}
+.sidebar::-webkit-scrollbar {/*تنسيق خلفية شريط التمرير*/
+    background: rgb(230,230,230);
+    width: 3px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgb(179,179,179);/*تنسيق شريط التمرير*/
+    width:8px;
+}
+.layer {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    display: none;
+}
